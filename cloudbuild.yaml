@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/$PROJECT_ID/gcloud'
-  args: ['info']
+  args: ['app', '--help']
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['appengine:deploy']
 
