@@ -4,8 +4,6 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/users'
   args: ['java', '-version']
 - name: 'gcr.io/$PROJECT_ID/users'
-  args: ['gcloud', 'projects', 'list']
-- name: 'gcr.io/$PROJECT_ID/users'
   args: ['mvn', '--version']
 - name: 'gcr.io/$PROJECT_ID/users'
   args: ['mvn', 'appengine:deploy']
