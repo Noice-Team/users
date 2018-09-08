@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/users', './src/main/docker/Dockerfile']
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/users', './src/main/docker/']
 - name: 'gcr.io/$PROJECT_ID/users'
   args: ['java', '-version']
 - name: 'gcr.io/$PROJECT_ID/users'
