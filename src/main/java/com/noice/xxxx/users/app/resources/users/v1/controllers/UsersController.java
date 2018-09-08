@@ -15,6 +15,6 @@ public class UsersController {
 	
 	@RequestMapping(value=NAME, method=RequestMethod.GET)
     public List<UserDto> listeProduits() {
-        return Arrays.asList(UserDto.builder().username("Kamule").build());
+        return Arrays.asList(UserDto.builder().username("Kamule2").build());
     }
 }
