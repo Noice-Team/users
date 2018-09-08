@@ -1,5 +1,11 @@
 steps:
+- name: 'gcr.io/cloud-builders/mvn'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/mvn'
+  args: ['package']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'test:unit']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy']
-timeout: '1600s'
+  args: ['app', 'deploy', 'src/main/appengine/app.yaml']
+
 images: ['gcr.io/$PROJECT_ID/users']
