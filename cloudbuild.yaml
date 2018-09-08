@@ -1,7 +1,7 @@
 steps:
+- name: 'gcr.io/$PROJECT_ID/gcloud'
+  args: ['info']
 - name: 'gcr.io/cloud-builders/mvn'
-  args: ['install']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/users', './src/main/appengine/app.yaml', '-f', 'Dockerfile', './src/main/docker/Dockerfile']
+  args: ['appengine:deploy']
 
 images: ['gcr.io/$PROJECT_ID/users']
