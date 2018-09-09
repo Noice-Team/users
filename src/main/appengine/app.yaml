@@ -1,7 +1,22 @@
 service: users
-runtime: java
-env: flex
-  
+runtime: java8
+inbound_services:
+- warmup
+derived_file_type:
+- java_precompiled
+threadsafe: True
+auto_id_policy: default
+api_version: '0.0.1-SNAPSHOT'
 handlers:
+- url: (/.*)
+  static_files: __static__\1
+  upload: __NOT_USED__
+  require_matching_file: True
+  login: optional
+  secure: optional
 - url: /.*
-  script: this field is required, but ignored
+  script: unused
+  login: optional
+  secure: optional
+
+skip_files: app.yaml
