@@ -6,7 +6,7 @@ derived_file_type:
 - java_precompiled
 threadsafe: True
 auto_id_policy: default
-api_version: '0.0.1-SNAPSHOT'
+api_version: '0.0.1'
 handlers:
 - url: (/.*)
   static_files: __static__\1
