@@ -2,6 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['deploy', 'app', './src/main/appengine/app.yaml']
+  args: ['app', 'deploy', './src/main/appengine/app.yaml']
 #--stop-previous-version
 images: ['gcr.io/$PROJECT_ID/users']
