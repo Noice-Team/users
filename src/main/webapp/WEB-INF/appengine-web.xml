@@ -4,4 +4,5 @@
 	<threadsafe>true</threadsafe>
 	<runtime>java8</runtime>
 	<application>xxxx-server</application>
+	<service>users</service>
 </appengine-web-app>

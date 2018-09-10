@@ -1,4 +1,3 @@
-service: users
 runtime: java8
 inbound_services:
 - warmup
@@ -19,4 +18,4 @@ handlers:
   login: optional
   secure: optional
 
-skip_files: app.yaml
+skip_files: users.app.yaml
