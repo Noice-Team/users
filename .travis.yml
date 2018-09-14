@@ -1,0 +1,10 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+  
+#deploy:
+#  provider: gae
+#  keyfile: "YOUR SERVICE ACCOUNT JSON FILE"
+#  project: "xxxx-server"
