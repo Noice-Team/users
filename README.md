@@ -1,6 +1,6 @@
 # users
 
-[![Build Status](https://travis-ci.com/Noice-Team/users.svg?branch=master)](https://travis-ci.com/Noice-Team/users.svg?branch=master)
+[![Build Status](https://travis-ci.com/Noice-Team/users.svg?branch=master)](https://travis-ci.com/Noice-Team/users)
 
 
 ## Outils
