@@ -3,6 +3,6 @@
 	<version>1</version>
 	<threadsafe>true</threadsafe>
 	<runtime>java8</runtime>
-	<application>xxxx-server</application>
+	<application>x-dev-ew3</application>
 	<service>users</service>
 </appengine-web-app>
