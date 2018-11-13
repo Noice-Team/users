@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.google.api.client.util.Maps;
 import com.noice.xxxx.users.app.db.user.UserDao;
 import com.noice.xxxx.users.app.execeptions.DatabaseException;
 import com.noice.xxxx.users.app.execeptions.UserNotFoundException;

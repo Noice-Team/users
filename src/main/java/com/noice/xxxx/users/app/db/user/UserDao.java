@@ -32,7 +32,7 @@ public class UserDao {
 		try {
 			documents = future.get().getDocuments();
 		} catch (InterruptedException | ExecutionException e) {
-			throw new DatabaseException();
+			throw new DatabaseException(e);
 		}
 		
 		return documents.stream()
