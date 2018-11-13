@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
-import javax.print.Doc;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +17,10 @@ import com.noice.xxxx.users.app.execeptions.DatabaseException;
 import com.noice.xxxx.users.app.execeptions.UserNotFoundException;
 import com.noice.xxxx.users.app.resources.users.v1.dto.UserDto;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class UserDao {
 	private static final String USER_COLLECTION =  "Users";
 	
@@ -32,6 +33,7 @@ public class UserDao {
 		try {
 			documents = future.get().getDocuments();
 		} catch (InterruptedException | ExecutionException e) {
+			log.error("Error load", e);
 			throw new DatabaseException(e);
 		}
 		
@@ -47,7 +49,8 @@ public class UserDao {
 		try {
 			snapshot = docRef.get().get();
 		} catch (InterruptedException | ExecutionException e) {
-			throw new DatabaseException();
+			log.error("Error load", e);
+			throw new DatabaseException(e);
 		}
 		if(!snapshot.exists()) {
 			throw new UserNotFoundException();
