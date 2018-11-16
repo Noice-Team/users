@@ -1,18 +1,11 @@
 package com.noice.xxxx.users.app.resources.users.v1.controllers;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.noice.xxxx.users.app.db.user.UserDao;
@@ -37,12 +30,12 @@ public class UsersController {
 		return this.dao.getUser(id);
 	}
 
-	@RequestMapping(value = "/error")
-	@ResponseBody
-	public ResponseEntity<Map<String, Object>> error(HttpServletRequest request) {
-		Map<String, Object> body = new HashMap<>();
-		body.put("error", request);
-//		HttpStatus status = getStatus(request);
-		return new ResponseEntity<Map<String, Object>>(body, HttpStatus.INTERNAL_SERVER_ERROR);
-	}
+//	@RequestMapping(value = "/error")
+//	@ResponseBody
+//	public ResponseEntity<Map<String, Object>> error(HttpServletRequest request) {
+//		Map<String, Object> body = new HashMap<>();
+//		body.put("error", request);
+////		HttpStatus status = getStatus(request);
+//		return new ResponseEntity<Map<String, Object>>(body, HttpStatus.INTERNAL_SERVER_ERROR);
+//	}
 }

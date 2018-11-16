@@ -19,7 +19,7 @@ public class DbConfig {
 	private String appId;
 	
 	@Bean
-	public Firestore  getAccountService() throws IOException {
+	public Firestore getAccountService() throws IOException {
 		GoogleCredentials credentials = GoogleCredentials.getApplicationDefault();
 		FirebaseOptions options = new FirebaseOptions.Builder()
 		    .setCredentials(credentials)
